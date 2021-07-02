@@ -6,6 +6,8 @@
 
 keywords: [[https://srfi.schemers.org/?keywords=i/o][I/O]]
 
+library-name: vicinities
+
 This repository hosts [[https://srfi.schemers.org/srfi-59/][SRFI 59]]: Vicinity, a [[https://srfi.schemers.org/][Scheme Request for Implementation]].
 
 This SRFI is in /final/ status.
