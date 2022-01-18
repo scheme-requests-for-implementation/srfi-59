@@ -95,7 +95,7 @@ procedures are supported by all implementations in
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>program-vicinity</B>
+<DT id="program-vicinity"><U>Function:</U> <B>program-vicinity</B>
 <DD><A NAME="IDX60"></A>
 Returns the vicinity of the currently loading Scheme code.  For an
 interpreter this would be the directory containing source code.  For a
@@ -109,7 +109,7 @@ escapes back into a <CODE>load</CODE> continuation.
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>library-vicinity</B>
+<DT id="library-vicinity"><U>Function:</U> <B>library-vicinity</B>
 <DD><A NAME="IDX61"></A>
 Returns the vicinity of the shared Scheme library.
 </DL>
@@ -117,7 +117,7 @@ Returns the vicinity of the shared Scheme library.
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>implementation-vicinity</B>
+<DT id="implementation-vicinity"><U>Function:</U> <B>implementation-vicinity</B>
 <DD><A NAME="IDX62"></A>
 Returns the vicinity of the underlying Scheme implementation.  This
 vicinity will likely contain startup code and messages and a compiler.
@@ -126,7 +126,7 @@ vicinity will likely contain startup code and messages and a compiler.
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>user-vicinity</B>
+<DT id="user-vicinity"><U>Function:</U> <B>user-vicinity</B>
 <DD><A NAME="IDX63"></A>
 Returns the vicinity of the current directory of the user.  On most
 systems this is <TT>`""'</TT> (the empty string).
@@ -135,7 +135,7 @@ systems this is <TT>`""'</TT> (the empty string).
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>home-vicinity</B>
+<DT id="home-vicinity"><U>Function:</U> <B>home-vicinity</B>
 <DD><A NAME="IDX64"></A>
 Returns the vicinity of the user's <EM>HOME</EM> directory, the directory
 <A NAME="IDX65"></A>
@@ -148,7 +148,7 @@ returns <CODE>#f</CODE>.
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>in-vicinity</B> <I>vicinity filename</I>
+<DT id="in-vicinity"><U>Function:</U> <B>in-vicinity</B> <I>vicinity filename</I>
 <DD><A NAME="IDX67"></A>
 Returns a filename suitable for use by <CODE>load</CODE>,
 <CODE>open-input-file</CODE>, <CODE>open-output-file</CODE>, etc.  The
@@ -165,7 +165,7 @@ and <VAR>vicinity</VAR> is equal to the value of
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>sub-vicinity</B> <I>vicinity name</I>
+<DT id="sub-vicinity"><U>Function:</U> <B>sub-vicinity</B> <I>vicinity name</I>
 <DD><A NAME="IDX68"></A>
 Returns the vicinity of <VAR>vicinity</VAR> restricted to <VAR>name</VAR>.  This
 is used for large systems where names of files in subsystems could
@@ -176,7 +176,7 @@ return a pathname of the subdirectory <VAR>name</VAR> of
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>make-vicinity</B> <I>dirpath</I>
+<DT id="make-vicinity"><U>Function:</U> <B>make-vicinity</B> <I>dirpath</I>
 <DD><A NAME="IDX58"></A>
 Returns <VAR>dirpath</VAR> as a vicinity for use as first argument to
 <CODE>in-vicinity</CODE>.
@@ -185,7 +185,7 @@ Returns <VAR>dirpath</VAR> as a vicinity for use as first argument to
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>pathname-&#62;vicinity</B> <I>path</I>
+<DT id="pathname-to-vicinity"><U>Function:</U> <B>pathname-&#62;vicinity</B> <I>path</I>
 <DD><A NAME="IDX59"></A>
 Returns the vicinity containing <VAR>path</VAR>.
 
@@ -199,7 +199,7 @@ Returns the vicinity containing <VAR>path</VAR>.
 
 <P>
 <DL>
-<DT><U>Function:</U> <B>vicinity:suffix?</B> <I>chr</I>
+<DT id="vicinity:suffix-p"><U>Function:</U> <B>vicinity:suffix?</B> <I>chr</I>
 <DD><A NAME="IDX66"></A>
 Returns the <SAMP>`#t'</SAMP> if <VAR>chr</VAR> is a vicinity suffix character; and
 <CODE>#f</CODE> otherwise.  Typical vicinity suffixes are <SAMP>`/'</SAMP>,
