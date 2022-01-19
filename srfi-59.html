@@ -1,23 +1,20 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
-<HTML>
+<HTML lang="en">
   <HEAD>
     <title>SRFI 59: Vicinity</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/srfi.css" type="text/css" />
+    <link rel="stylesheet" href="https://srfi.schemers.org/srfi.css" type="text/css" />
+    <link href="/favicon.png" rel="icon" sizes="192x192" type="image/png">
   </HEAD>
 
   <BODY>
 
-<H1>Title</H1>
+<h1><a href="https://srfi.schemers.org/"><img class="srfi-logo" src="https://srfi.schemers.org/srfi-logo.svg" alt="SRFI surfboard logo" /></a>59: Vicinity</h1>
 
-Vicinity
+<p>by Aubrey Jaffer</p>
 
-<H1>Author</H1>
-
-Aubrey Jaffer
-
-<H1>Status</H1> 
+<h2>Status</h2>
 
 <p>This SRFI is currently in <em>final</em> status.  Here is <a href="https://srfi.schemers.org/srfi-process.html">an explanation</a> of each status that a SRFI can hold.  To provide input on this SRFI, please send email to <code><a href="mailto:srfi+minus+59  +at+srfi+dotschemers+dot+org">srfi-59  @<span class="antispam">nospam</span>srfi.schemers.org</a></code>.  To subscribe to the list, follow <a href="https://srfi.schemers.org/srfi-list-subscribe.html">these instructions</a>.  You can access previous messages via the mailing list <a href="https://srfi-email.schemers.org/srfi-59  ">archive</a>.</p>
 <UL>
@@ -26,7 +23,7 @@ Aubrey Jaffer
   <LI>Final: 2005-03-08</LI>
 </UL>
 
-<H1>Abstract</H1>
+<h2>Abstract</h2>
 
 A vicinity is a descriptor for a place in the file system.  Vicinities
 hide from the programmer the concepts of host, volume, directory, and
@@ -39,7 +36,7 @@ vicinity procedures can make programs file-system
 <EM>in</EM>dependent.
 <P>
 
-<H1>Rationale</H1>
+<h2>Rationale</h2>
 
 Most computer languages expose the syntax of pathnames of the host
 file-system when dealing with files.
@@ -91,7 +88,7 @@ procedures are supported by all implementations in
 <A HREF="http://swiss.csail.mit.edu/~jaffer/SLIB">SLIB</A>.
 <P>
 
-<H1>Specification</H1>
+<h2>Specification</h2>
 
 <P>
 <DL>
@@ -207,7 +204,7 @@ Returns the <SAMP>`#t'</SAMP> if <VAR>chr</VAR> is a vicinity suffix character; 
 </DL>
 
 
-<H1>Implementation</H1>
+<h2>Implementation</h2>
 
 This code is taken from
 <A HREF="http://savannah.gnu.org/cgi-bin/viewcvs/*checkout*/slib/slib/logical.scm?rev=HEAD&amp;content-type=text/vnd.viewcvs-markup">slib/Template.scm</A>
@@ -309,7 +306,7 @@ and
 </PRE>
 <P>
 
-<H1>Copyright</H1>
+<h2>Copyright</h2>
 <p>Copyright (C) Aubrey Jaffer (2004). All Rights Reserved.</p>
 
 <p>
