@@ -24,17 +24,18 @@
 </ul>
 
 <h2>Abstract</h2>
-
+<p>
 A vicinity is a descriptor for a place in the file system.  Vicinities
 hide from the programmer the concepts of host, volume, directory, and
 version.  Vicinities express only the concept of a file environment
 where a file name can be resolved to a file in a system independent
 manner.
+</p>
 <p>
 All of these procedures are file-system dependent.  Use of these
 vicinity procedures can make programs file-system
 <em>in</em>dependent.
-</p><p>
+</p>
 
 <h2>Rationale</h2>
 <p>
@@ -42,28 +43,33 @@ Most computer languages expose the syntax of pathnames of the host
 file-system when dealing with files.
 But a great many programs require read access to data, text, or
 library files they were installed with.
-</p><p>
+</p>
+<p>
 Some programs use literal strings to locate accessory files, breaking
 on installations with different destinations.
 More savvy coders will construct pathnames from environment variables
 or compile-time definitions.
-</p><p>
+</p>
+<p>
 In most languages, programs intended for portability must condition
 all manipulations of pathnames to the syntax and capabilities of the
 host file-system.  Inconsistent conditioning is a common cause of
 porting failures.
-</p><p>
+</p>
+<p>
 Common-Lisp attacks the general problem of naming files anywhere in
 any file system.  It has a six-component <dfn>pathname</dfn> datatype
 to represent names in the most complicated file-system imaginable;
 names in simpler file systems use fewer components.
-</p><p>
+</p>
+<p>
 In this arrangement, portable file-handling programs must be capable
 of handling pathnames with 6 components, and those employing fewer.
 But which component will be used is not obvious.  Is a
 <code>".txt"</code> filename suffix a <i>type</i> or part of the
 <i>name</i>?
-</p><p>
+</p>
+<p>
 Vicinities attack a smaller problem, that of describing pathnames in 5
 predefined locations, and their sub-vicinities.  Those predefined
 locations cover the usual areas for ancillary and configuration files
@@ -72,17 +78,20 @@ used by Scheme implementations and programs.  The
 directory where the currently loading file is located.  This is
 captured by redefining <code>load</code> to <code>fluid-let</code> a
 top-level variable with its argument.
-</p><p>
+</p>
+<p>
 The <code>make-vicinity</code> and <code>pathname-&gt;vicinity</code>
 procedures provide means to create new base vicinities.  Base
 vicinities should generally be absolute pathnames.
-</p><p>
+</p>
+<p>
 Vicinities need not be tied to individual files in a file system.  The
 files named could be members of a zip archive, as Java does.
 Vicinities can even be used on <em>flat</em> file systems (which have
 no directory structure) by having the vicinity express constraints on
 the file name.  On most systems a vicinity is a string.
-</p><p>
+</p>
+<p>
 <a href="http://swiss.csail.mit.edu/~jaffer/slib_2.html#SEC14"><tt>vicinity</tt></a>
 procedures are supported by all implementations in
 <a href="http://swiss.csail.mit.edu/~jaffer/SLIB">SLIB</a>.
